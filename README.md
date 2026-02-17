@@ -3,7 +3,7 @@
 
 > [点击此处跳转到中文文档](README-zh-CN.md)
 
-This is a lightweight C++ driver for the ICP10111 pressure and temperature sensor, intended for use with STM32Cube HAL.
+This is a lightweight C++ driver for the ICP10111 pressure and temperature sensor, intended for use with STM32Cube HAL. FreeRTOS is supported.
 
 ## Features
 
@@ -27,6 +27,7 @@ This is a lightweight C++ driver for the ICP10111 pressure and temperature senso
 ## Quick Example (STM32 / HAL)
 
 The following example demonstrates initialization, measurement, data conversion and altitude calculation. It assumes `hi2c1` is configured and `huart1` is used for debug output.
+(If you want to use FreeRTOS, please make sure to define `ICP_USE_FREERTOS` as true in `icp10111.h` and ensure FreeRTOS library is available)
 
 ```cpp
 #include <cstdio>

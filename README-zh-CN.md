@@ -2,7 +2,7 @@
 
 > [Click here for English docs](README.md)
 
-这是一个针对 ICP10111 压力与温度传感器的轻量级 C++ 驱动，面向 STM32Cube HAL。
+这是一个针对 ICP10111 压力与温度传感器的轻量级 C++ 驱动，面向 STM32Cube HAL。支持FreeRTOS。
 
 ## 特性
 
@@ -26,6 +26,7 @@
 ## 快速示例（STM32 / HAL）
 
 此例程演示了 ICP10111 初始化、测量、数据转换、高度计算等流程。使用的HI2C1外设，并添加了一个USART1 用于输出调试信息。
+(若您需要使用 FreeRTOS，请确保在 `icp10111.h` 中将 `ICP_USE_FREERTOS` 定义为真，并确保 FreeRTOS 库可被找到)
 
 ```cpp
 #include <cstdio>
